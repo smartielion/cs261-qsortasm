@@ -96,17 +96,16 @@ int main(int argc, char* argv[]){
 	qsortASM(sortListASM,0, getEntries(table));
 	clock_t asmClockT = clock() -t;
 	float qsortASMTinSeconds = (float)asmClockT/CLOCKS_PER_SEC;
-	printf("C qsort took %f seconds.\n",qsortTinSeconds);
-	printf("ASM qsort took %f seconds.\n", qsortASMTinSeconds);
   	//for (int p = 0;p<250;p++){
 	//node* node = sortList[p];	
 	//printf("Key: %16s \n",node->key);
 	//}
-	for (int p = 0;p<50;p++){
+	for (int p = 0;p<getEntries(table);p++){
 		//prints all values in the sortlistASM table
 		printf("Key: %16s \n", sortListASM[p]);	
 	}
-	
+		printf("C qsort took %f seconds.\n",qsortTinSeconds);
+	printf("ASM qsort took %f seconds.\n", qsortASMTinSeconds);
 	printf("done printing, closing file\n");
   fclose(filename);
 return 0;

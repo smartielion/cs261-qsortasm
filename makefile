@@ -1,4 +1,4 @@
-all: frequencyCount
+all: frequencyCount clean
 
 FORMAT = elf
 SYMFORMAT = dwarf
